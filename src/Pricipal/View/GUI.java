@@ -1,5 +1,7 @@
 package Pricipal.View;
 
+import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 /*
@@ -19,6 +21,7 @@ public class GUI extends javax.swing.JFrame {
      */
     public GUI() {
         initComponents();
+        startMap();
     }
 
     /**
@@ -35,6 +38,11 @@ public class GUI extends javax.swing.JFrame {
         WallHell = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formKeyPressed(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Mapa.setOpaque(false);
@@ -47,25 +55,52 @@ public class GUI extends javax.swing.JFrame {
         Fondo.setLayout(FondoLayout);
         FondoLayout.setHorizontalGroup(
             FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FondoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(WallHell, javax.swing.GroupLayout.DEFAULT_SIZE, 802, Short.MAX_VALUE)
-                .addGap(37, 37, 37))
+            .addComponent(WallHell)
         );
         FondoLayout.setVerticalGroup(
             FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(FondoLayout.createSequentialGroup()
-                .addComponent(WallHell, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 169, Short.MAX_VALUE))
+            .addComponent(WallHell)
         );
-
-        WallHell.getAccessibleContext().setAccessibleName("");
 
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, -1, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+        // TODO add your handling code here:
+        int keyPressed = evt.getKeyCode();
+        switch (keyPressed){
+            case KeyEvent.VK_UP:
+                break;
+                case KeyEvent.VK_DOWN:
+                break;
+                case KeyEvent.VK_LEFT:
+                break;
+                case KeyEvent.VK_RIGHT:
+                break;
+        }
+    }//GEN-LAST:event_formKeyPressed
+
+    private void startMap(){
+        //pop [1] = new ImageIcon(getClass().getResource("/Means/giphy.gif"));
+        pop [2] = new ImageIcon(getClass().getResource("/Means/wall.png"));
+        
+        for (int i = 0; i < map.length; i++) {
+            for (int j = 0; j < map[i].length; j++) {
+                map[i][j] = new JLabel(pop[1]);
+                Mapa.add(map[i][j]);
+            }
+            
+    }
+        //map[0][0].setIcon(pop[1]);
+
+        map[0][2].setIcon(pop[2]);
+        map[1][2].setIcon(pop[2]);
+        map[2][2].setIcon(pop[2]);
+        map[2][0].setIcon(pop[2]);
+        map[2][1].setIcon(pop[2]);
+    }
     /**
      * @param args the command line arguments
      */
@@ -102,6 +137,7 @@ public class GUI extends javax.swing.JFrame {
     }
 
     private final JLabel[][] map = new JLabel[8][8];
+    private ImageIcon pop [] = new ImageIcon[3];
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Fondo;

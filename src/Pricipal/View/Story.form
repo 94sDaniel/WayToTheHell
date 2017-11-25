@@ -24,12 +24,30 @@
     <Property name="useNullLayout" type="boolean" value="true"/>
   </Layout>
   <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Desde que Zeus, Poseid&#xf3;n y Hades vencieron a su padre Cronos, la decisi&#xf3;n de Zeus de tomar el liderazgo del Olimpo y asignarle el inframundo a Hades a generado gran rencor por parte de su hermano. Al no estar satisfecho con esa decisi&#xf3;n Hades opta por atacar a su hermano para intentar tomar el poder del Olimpo. Hades encarga a alguno de sus demonios robar la espada de Zeus, la espada m&#xe1;s poderosa de todas, ya que era la espada que pertenec&#xed;a a su padre. Al dejar a Zeus sin esta espada dejaba a Hades con cierta ventaja a la hora de atacar, pero cuando intenta hacerlo los dem&#xe1;s dioses y semidioses defienden a Zeus y hades no logra su objetivo de tomar el control del Olimpo, pero en un momento de distracci&#xf3;n, uno de sus demonios logra tomar la espada y llev&#xe1;rsela a Hades; al verse rodeado Hades destruye la espada en 7 partes y en su huida las esparce en el camino hacia el inframundo. Al ver que Zeus queda vulnerable ante otro posible ataque los dem&#xe1;s dioses y semidioses deciden acompa&#xf1;ar a Zeus al inframundo y enfrentar a Hades para que no vuelva intentar tomar el poder nuevamente y tomar los pedazos de la espada para reconstruirla y asi poder vencer a Hades, pero en el camino se encontraran con diferentes monstros y demonios que har&#xe1;n lo posible para no dejarlos continuar."/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[700, 700]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[700, 700]"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="70" y="160" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Means/historia.jpg"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Desde que Zeus, Poseid&#xf3;n y Hades vencieron a su padre Cronos, la decisi&#xf3;n de Zeus&#xa; de tomar el liderazgo del Olimpo y asignarle el inframundo a Hades a generado gran rencor por parte de su hermano.&#xa; Al no estar satisfecho con esa decisi&#xf3;n Hades opta por atacar a su hermano para intentar tomar el poder del Olimpo. &#xa;Hades encarga a alguno de sus demonios robar la espada de Zeus, la espada m&#xe1;s poderosa de todas, ya que era la espada que pertenec&#xed;a a su padre.&#xa;Al dejar a Zeus sin esta espada dejaba a Hades con cierta ventaja a la hora de atacar, pero cuando intenta hacerlo los dem&#xe1;s dioses y semidioses defienden a &#xa;Zeus y hades no logra su objetivo de tomar el control del Olimpo, pero en un momento de distracci&#xf3;n, uno de sus demonios logra tomar la espada y llev&#xe1;rsela a Hades; &#xa;al verse rodeado Hades destruye la espada en 7 partes y en su huida las esparce en el camino hacia el inframundo. Al ver que Zeus queda vulnerable ante otro posible&#xa; ataque los dem&#xe1;s dioses y semidioses deciden acompa&#xf1;ar a Zeus al inframundo y enfrentar a Hades para que no vuelva intentar tomar el poder nuevamente y tomar los &#xa;pedazos de la espada para reconstruirla y asi poder vencer a Hades, pero en el camino se encontraran con diferentes monstros y demonios que har&#xe1;n lo posible para no&#xa; dejarlos continuar"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -37,25 +55,5 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="360" y="200" width="370" height="200"/>
-        </Constraint>
-      </Constraints>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
-          <Properties>
-            <Property name="columns" type="int" value="20"/>
-            <Property name="rows" type="int" value="5"/>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
   </SubComponents>
 </Form>

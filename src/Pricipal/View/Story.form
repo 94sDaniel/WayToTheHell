@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="true"/>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Means/historia.jpg"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Desde que Zeus, Poseid&#xf3;n y Hades vencieron a su padre Cronos, la decisi&#xf3;n de Zeus&#xa; de tomar el liderazgo del Olimpo y asignarle el inframundo a Hades a generado gran rencor por parte de su hermano.&#xa; Al no estar satisfecho con esa decisi&#xf3;n Hades opta por atacar a su hermano para intentar tomar el poder del Olimpo. &#xa;Hades encarga a alguno de sus demonios robar la espada de Zeus, la espada m&#xe1;s poderosa de todas, ya que era la espada que pertenec&#xed;a a su padre.&#xa;Al dejar a Zeus sin esta espada dejaba a Hades con cierta ventaja a la hora de atacar, pero cuando intenta hacerlo los dem&#xe1;s dioses y semidioses defienden a &#xa;Zeus y hades no logra su objetivo de tomar el control del Olimpo, pero en un momento de distracci&#xf3;n, uno de sus demonios logra tomar la espada y llev&#xe1;rsela a Hades; &#xa;al verse rodeado Hades destruye la espada en 7 partes y en su huida las esparce en el camino hacia el inframundo. Al ver que Zeus queda vulnerable ante otro posible&#xa; ataque los dem&#xe1;s dioses y semidioses deciden acompa&#xf1;ar a Zeus al inframundo y enfrentar a Hades para que no vuelva intentar tomar el poder nuevamente y tomar los &#xa;pedazos de la espada para reconstruirla y asi poder vencer a Hades, pero en el camino se encontraran con diferentes monstros y demonios que har&#xe1;n lo posible para no&#xa; dejarlos continuar"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="24" y="0" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="360" y="200" width="370" height="200"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea1">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

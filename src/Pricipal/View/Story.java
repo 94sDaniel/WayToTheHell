@@ -29,11 +29,12 @@ public class Story extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1200, 720));
+        setMinimumSize(new java.awt.Dimension(1200, 720));
+        setPreferredSize(new java.awt.Dimension(1200, 720));
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
@@ -41,22 +42,9 @@ public class Story extends javax.swing.JFrame {
         });
         getContentPane().setLayout(null);
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Arabic Typesetting", 0, 13)); // NOI18N
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Desde que Zeus, Poseidón y Hades vencieron a su padre Cronos,\n la decisión de Zeus de tomar el liderazgo del Olimpo y asignarle \nel inframundo a Hades a generado gran rencor por parte de su hermano. \nAl no estar satisfecho con esa decisión Hades opta por atacar a su \nhermano para intentar tomar el poder del Olimpo. Hades encarga a alguno \nde sus demonios robar la espada de Zeus, la espada más poderosa de todas,\n ya que era la espada que pertenecía a su padre. Al dejar a Zeus sin esta \nespada dejaba a Hades con cierta ventaja a la hora de atacar, pero cuando \nintenta hacerlo los demás dioses y semidioses defienden a Zeus y hades no \nlogra su objetivo de tomar el control del Olimpo, pero en un momento de \ndistracción, uno de sus demonios logra tomar la espada y llevársela a Hades; \nal verse rodeado Hades destruye la espada en 7 partes y en su huida las \nesparce en el camino hacia el inframundo. Al ver que Zeus queda vulnerable \nante otro posible ataque los demás dioses y semidioses deciden acompañar a \nZeus al inframundo y enfrentar a Hades para que no vuelva intentar tomar el\n poder nuevamente y tomar los pedazos de la espada para reconstruirla y asi\n poder vencer a Hades, pero en el camino se encontraran con diferentes monstros y demonios que harán lo posible para no dejarlos continuar.");
-        jTextArea1.setFocusable(false);
-        jTextArea1.setOpaque(false);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(170, 80, 630, 350);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Means/historia.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1095, 634);
-        jLabel1.getAccessibleContext().setAccessibleName("Story");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Means/story.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 1190, 720);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -106,8 +94,6 @@ public class Story extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

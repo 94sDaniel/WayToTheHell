@@ -154,6 +154,9 @@ public class GUI extends javax.swing.JFrame {
         jLabel1.setBounds(0, 0, 776, 439);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(550, 360));
+        setMinimumSize(new java.awt.Dimension(550, 360));
+        setPreferredSize(new java.awt.Dimension(550, 360));
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
@@ -161,9 +164,15 @@ public class GUI extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Mapa.setMaximumSize(new java.awt.Dimension(700, 700));
+        Mapa.setMinimumSize(new java.awt.Dimension(700, 700));
         Mapa.setOpaque(false);
         Mapa.setLayout(new java.awt.GridLayout(8, 8));
         getContentPane().add(Mapa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -7, 550, 330));
+
+        Fondo.setMaximumSize(new java.awt.Dimension(1680, 1500));
+        Fondo.setMinimumSize(new java.awt.Dimension(1680, 1500));
+        Fondo.setPreferredSize(new java.awt.Dimension(1680, 1500));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Means/fondo.jpg"))); // NOI18N
 
@@ -171,21 +180,15 @@ public class GUI extends javax.swing.JFrame {
         Fondo.setLayout(FondoLayout);
         FondoLayout.setHorizontalGroup(
             FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1680, Short.MAX_VALUE)
-            .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(FondoLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel4)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(FondoLayout.createSequentialGroup()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 1240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 440, Short.MAX_VALUE))
         );
         FondoLayout.setVerticalGroup(
             FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1050, Short.MAX_VALUE)
-            .addGroup(FondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(FondoLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel4)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(FondoLayout.createSequentialGroup()
+                .addComponent(jLabel4)
+                .addGap(0, 1050, Short.MAX_VALUE))
         );
 
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, -1, 530));

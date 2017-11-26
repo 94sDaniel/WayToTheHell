@@ -64,9 +64,9 @@ public class Story extends javax.swing.JFrame {
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
         // TODO add your handling code here:
         int keypressed = evt.getKeyCode();
-        if (keypressed == KeyEvent.VK_ENTER ){
+        if (keypressed == KeyEvent.VK_ENTER) {
             GUI jFrame = new GUI();
-                jFrame.setVisible(true);
+            jFrame.setVisible(true);
         }
     }//GEN-LAST:event_formKeyPressed
 

@@ -19,7 +19,6 @@ public class Screen1 extends javax.swing.JFrame {
     public Screen1() {
         initComponents();
     }
-         
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -61,10 +60,10 @@ public class Screen1 extends javax.swing.JFrame {
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
 
-int keypressed = evt.getKeyCode();
-        if (keypressed == KeyEvent.VK_ENTER ){
+        int keypressed = evt.getKeyCode();
+        if (keypressed == KeyEvent.VK_ENTER) {
             Story jFrame = new Story();
-                jFrame.setVisible(true);
+            jFrame.setVisible(true);
         }
     }//GEN-LAST:event_formKeyPressed
 

@@ -9,7 +9,6 @@ import javax.swing.JLabel;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author JCALLE
@@ -70,38 +69,92 @@ public class GUI extends javax.swing.JFrame {
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
         // TODO add your handling code here:
         int keyPressed = evt.getKeyCode();
-        switch (keyPressed){
+        switch (keyPressed) {
             case KeyEvent.VK_UP:
+                if (posX != 0) {
+                    if (!(map[posX - 1][posY].getIcon() == pop[2])) {
+                        map[posX][posY].setIcon(null);
+                        posX--;
+                        map[posX][posY].setIcon(pop[1]);
+                    }
+                }
                 break;
-                case KeyEvent.VK_DOWN:
+            case KeyEvent.VK_DOWN:
+                if (posX != 7) {
+                    if (!(map[posX + 1][posY].getIcon() == pop[2])) {
+                        map[posX][posY].setIcon(null);
+                        posX++;
+                        map[posX][posY].setIcon(pop[1]);
+                    }
+                }
                 break;
-                case KeyEvent.VK_LEFT:
+            case KeyEvent.VK_LEFT:
+                if (posY != 0) {
+                    if (!(map[posX][posY - 1].getIcon() == pop[2])) {
+                        map[posX][posY].setIcon(null);
+                        posY--;
+                        map[posX][posY].setIcon(pop[1]);
+                    }
+                }
                 break;
-                case KeyEvent.VK_RIGHT:
+            case KeyEvent.VK_RIGHT:
+                if (posY != 7) {
+                    if (!(map[posX][posY + 1].getIcon() == pop[2])) {
+                        map[posX][posY].setIcon(null);
+                        posY++;
+                        map[posX][posY].setIcon(pop[1]);
+                    }
+                }
                 break;
         }
     }//GEN-LAST:event_formKeyPressed
 
-    private void startMap(){
-        pop [1] = new ImageIcon(getClass().getResource("/Means/soldier.png"));
-        pop [2] = new ImageIcon(getClass().getResource("/Means/wall.png"));
-        
+    private void startMap() {
+        pop[1] = new ImageIcon(getClass().getResource("/Means/soldier.png"));
+        pop[2] = new ImageIcon(getClass().getResource("/Means/wall.png"));
+        pop[3] = new ImageIcon(getClass().getResource("/Means/Hades.png"));
+
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
                 map[i][j] = new JLabel(pop[1]);
                 map[i][j].setIcon(null);
                 Mapa.add(map[i][j]);
             }
-            
-    }
-        map[0][0].setIcon(pop[1]);
 
-        map[0][2].setIcon(pop[2]);
-        map[1][2].setIcon(pop[2]);
-        map[2][2].setIcon(pop[2]);
-        map[2][0].setIcon(pop[2]);
+        }
+        map[0][0].setIcon(pop[1]);
+        map[1][6].setIcon(pop[3]);
+
+        map[1][0].setIcon(pop[2]);
+        map[1][1].setIcon(pop[2]);
         map[2][1].setIcon(pop[2]);
+        map[3][1].setIcon(pop[2]);
+        map[4][1].setIcon(pop[2]);
+        map[6][0].setIcon(pop[2]);
+        map[6][1].setIcon(pop[2]);
+        map[6][2].setIcon(pop[2]);
+      
+        map[0][3].setIcon(pop[2]);
+        map[1][3].setIcon(pop[2]);
+        map[2][3].setIcon(pop[2]);
+        map[2][4].setIcon(pop[2]);
+        map[3][4].setIcon(pop[2]);
+        map[4][4].setIcon(pop[2]);
+        map[5][4].setIcon(pop[2]);
+        map[0][7].setIcon(pop[2]);
+        map[1][7].setIcon(pop[2]);
+        map[2][7].setIcon(pop[2]);
+        map[2][6].setIcon(pop[2]);
+        map[3][6].setIcon(pop[2]);
+        map[4][6].setIcon(pop[2]);
+        map[5][6].setIcon(pop[2]);
+        map[7][5].setIcon(pop[2]);
+        map[7][6].setIcon(pop[2]);
+        map[7][7].setIcon(pop[2]);
+        
+
     }
+
     /**
      * @param args the command line arguments
      */
@@ -136,10 +189,10 @@ public class GUI extends javax.swing.JFrame {
             }
         });
     }
-
+    int posX = 0, posY = 0;
     private final JLabel[][] map = new JLabel[8][8];
-    private ImageIcon pop [] = new ImageIcon[3];
-    
+    private ImageIcon pop[] = new ImageIcon[5];
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Fondo;
     private javax.swing.JPanel Mapa;

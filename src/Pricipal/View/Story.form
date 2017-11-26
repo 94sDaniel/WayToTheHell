@@ -8,6 +8,9 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="formKeyPressed"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -18,40 +21,52 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,3,-115,0,0,4,91"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
     <Property name="useNullLayout" type="boolean" value="true"/>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLabel2">
-      <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Desde que Zeus, Poseid&#xf3;n y Hades vencieron a su padre Cronos, la decisi&#xf3;n de Zeus de tomar el liderazgo del Olimpo y asignarle el inframundo a Hades a generado gran rencor por parte de su hermano. Al no estar satisfecho con esa decisi&#xf3;n Hades opta por atacar a su hermano para intentar tomar el poder del Olimpo. Hades encarga a alguno de sus demonios robar la espada de Zeus, la espada m&#xe1;s poderosa de todas, ya que era la espada que pertenec&#xed;a a su padre. Al dejar a Zeus sin esta espada dejaba a Hades con cierta ventaja a la hora de atacar, pero cuando intenta hacerlo los dem&#xe1;s dioses y semidioses defienden a Zeus y hades no logra su objetivo de tomar el control del Olimpo, pero en un momento de distracci&#xf3;n, uno de sus demonios logra tomar la espada y llev&#xe1;rsela a Hades; al verse rodeado Hades destruye la espada en 7 partes y en su huida las esparce en el camino hacia el inframundo. Al ver que Zeus queda vulnerable ante otro posible ataque los dem&#xe1;s dioses y semidioses deciden acompa&#xf1;ar a Zeus al inframundo y enfrentar a Hades para que no vuelva intentar tomar el poder nuevamente y tomar los pedazos de la espada para reconstruirla y asi poder vencer a Hades, pero en el camino se encontraran con diferentes monstros y demonios que har&#xe1;n lo posible para no dejarlos continuar."/>
-        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[700, 700]"/>
-        </Property>
-        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[700, 700]"/>
-        </Property>
-      </Properties>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="70" y="160" width="-1" height="-1"/>
+          <AbsoluteConstraints x="170" y="80" width="630" height="350"/>
         </Constraint>
       </Constraints>
-    </Component>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea1">
+          <Properties>
+            <Property name="editable" type="boolean" value="false"/>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arabic Typesetting" size="13" style="0"/>
+            </Property>
+            <Property name="rows" type="int" value="5"/>
+            <Property name="text" type="java.lang.String" value="Desde que Zeus, Poseid&#xf3;n y Hades vencieron a su padre Cronos,&#xa; la decisi&#xf3;n de Zeus de tomar el liderazgo del Olimpo y asignarle &#xa;el inframundo a Hades a generado gran rencor por parte de su hermano. &#xa;Al no estar satisfecho con esa decisi&#xf3;n Hades opta por atacar a su &#xa;hermano para intentar tomar el poder del Olimpo. Hades encarga a alguno &#xa;de sus demonios robar la espada de Zeus, la espada m&#xe1;s poderosa de todas,&#xa; ya que era la espada que pertenec&#xed;a a su padre. Al dejar a Zeus sin esta &#xa;espada dejaba a Hades con cierta ventaja a la hora de atacar, pero cuando &#xa;intenta hacerlo los dem&#xe1;s dioses y semidioses defienden a Zeus y hades no &#xa;logra su objetivo de tomar el control del Olimpo, pero en un momento de &#xa;distracci&#xf3;n, uno de sus demonios logra tomar la espada y llev&#xe1;rsela a Hades; &#xa;al verse rodeado Hades destruye la espada en 7 partes y en su huida las &#xa;esparce en el camino hacia el inframundo. Al ver que Zeus queda vulnerable &#xa;ante otro posible ataque los dem&#xe1;s dioses y semidioses deciden acompa&#xf1;ar a &#xa;Zeus al inframundo y enfrentar a Hades para que no vuelva intentar tomar el&#xa; poder nuevamente y tomar los pedazos de la espada para reconstruirla y asi&#xa; poder vencer a Hades, pero en el camino se encontraran con diferentes monstros y demonios que har&#xe1;n lo posible para no dejarlos continuar."/>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="opaque" type="boolean" value="false"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Means/historia.jpg"/>
         </Property>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Story"/>
+      </AccessibilityProperties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="24" y="0" width="-1" height="-1"/>
+          <AbsoluteConstraints x="0" y="0" width="1095" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

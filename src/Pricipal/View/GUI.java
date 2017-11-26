@@ -83,17 +83,18 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_formKeyPressed
 
     private void startMap(){
-        //pop [1] = new ImageIcon(getClass().getResource("/Means/giphy.gif"));
+        pop [1] = new ImageIcon(getClass().getResource("/Means/soldier.png"));
         pop [2] = new ImageIcon(getClass().getResource("/Means/wall.png"));
         
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
                 map[i][j] = new JLabel(pop[1]);
+                map[i][j].setIcon(null);
                 Mapa.add(map[i][j]);
             }
             
     }
-        //map[0][0].setIcon(pop[1]);
+        map[0][0].setIcon(pop[1]);
 
         map[0][2].setIcon(pop[2]);
         map[1][2].setIcon(pop[2]);

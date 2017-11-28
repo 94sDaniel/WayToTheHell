@@ -31,6 +31,7 @@ public class Battle extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jProgressBar1 = new javax.swing.JProgressBar();
         jProgressBar2 = new javax.swing.JProgressBar();
@@ -41,6 +42,8 @@ public class Battle extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(700, 400));
+        setMinimumSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -80,6 +83,13 @@ public class Battle extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(-20, 330, 800, 110);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Means/leonidasgrande.png"))); // NOI18N
+        jLabel4.setMaximumSize(new java.awt.Dimension(200, 200));
+        jLabel4.setMinimumSize(new java.awt.Dimension(200, 200));
+        jLabel4.setPreferredSize(new java.awt.Dimension(200, 200));
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(200, 170, 100, 120);
 
         jPanel2.setOpaque(false);
 
@@ -187,6 +197,7 @@ public class Battle extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

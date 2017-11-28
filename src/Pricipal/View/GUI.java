@@ -205,7 +205,7 @@ public class GUI extends javax.swing.JFrame {
                     if (!(map[posX - 1][posY].getIcon() == pop[2])) {
                         map[posX][posY].setIcon(null);
                         posX--;
-                        map[posX][posY].setIcon(pop[1]);
+                        map[posX][posY].setIcon(pop[4]);
                     }
                 }
                 break;
@@ -214,7 +214,7 @@ public class GUI extends javax.swing.JFrame {
                     if (!(map[posX + 1][posY].getIcon() == pop[2])) {
                         map[posX][posY].setIcon(null);
                         posX++;
-                        map[posX][posY].setIcon(pop[1]);
+                        map[posX][posY].setIcon(pop[5]);
                     }
                 }
                 break;
@@ -223,7 +223,7 @@ public class GUI extends javax.swing.JFrame {
                     if (!(map[posX][posY - 1].getIcon() == pop[2])) {
                         map[posX][posY].setIcon(null);
                         posY--;
-                        map[posX][posY].setIcon(pop[1]);
+                        map[posX][posY].setIcon(pop[6]);
                     }
                 }
                 break;
@@ -232,7 +232,7 @@ public class GUI extends javax.swing.JFrame {
                     if (!(map[posX][posY + 1].getIcon() == pop[2])) {
                         map[posX][posY].setIcon(null);
                         posY++;
-                        map[posX][posY].setIcon(pop[1]);
+                        map[posX][posY].setIcon(pop[6]);
                     }
                 }
                 break;
@@ -244,6 +244,10 @@ public class GUI extends javax.swing.JFrame {
         pop[1] = new ImageIcon(getClass().getResource("/Means/soldier.png"));
         pop[2] = new ImageIcon(getClass().getResource("/Means/wall.png"));
         pop[3] = new ImageIcon(getClass().getResource("/Means/Hades.png"));
+        pop[4] = new ImageIcon(getClass().getResource("/Means/leonidas_frente.png"));
+        pop[5] = new ImageIcon(getClass().getResource("/Means/leonidas_atras.png"));
+        pop[6] = new ImageIcon(getClass().getResource("/Means/leonidas_lado.png"));
+        pop[7] = new ImageIcon(getClass().getResource("/Means/baul_proyecto.png"));
 
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
@@ -253,8 +257,11 @@ public class GUI extends javax.swing.JFrame {
             }
 
         }
-        map[0][0].setIcon(pop[1]);
+        map[0][0].setIcon(pop[4]);
         map[1][6].setIcon(pop[3]);
+        map[2][0].setIcon(pop[7]);
+        map[3][7].setIcon(pop[7]);
+        map[7][0].setIcon(pop[7]);
 
         map[1][0].setIcon(pop[2]);
         map[1][1].setIcon(pop[2]);
@@ -322,21 +329,18 @@ public class GUI extends javax.swing.JFrame {
     }
     int posX = 0, posY = 0;
     private final JLabel[][] map = new JLabel[8][8];
-    private ImageIcon pop[] = new ImageIcon[5];
+    private ImageIcon pop[] = new ImageIcon[8];
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Fondo;
     private javax.swing.JPanel Mapa;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;

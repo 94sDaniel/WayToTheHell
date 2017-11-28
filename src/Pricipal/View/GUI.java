@@ -3,6 +3,7 @@ package Pricipal.View;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -196,10 +197,23 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
-        // TODO add your handling code here:
-        int keyPressed = evt.getKeyCode();
-        switch (keyPressed) {
+    private void pickupObject() {
+        if (posY == 0 && posX == 2 || posY == 0 && posX == 7 || posY == 7 && posX == 3) {
+            JOptionPane.showMessageDialog(null, "Recogio un fracmento de la espada");
+        }
+    }
+
+    private void goBattle() {
+        double option = Math.random();
+        if (option >= 0.8) {
+            Battle btl = new Battle(0);
+            btl.setVisible(true);
+        }
+    }
+
+    private void mover(int tecla) {
+
+        switch (tecla) {
             case KeyEvent.VK_UP:
                 if (posX != 0) {
                     if (!(map[posX - 1][posY].getIcon() == pop[2])) {
@@ -237,7 +251,16 @@ public class GUI extends javax.swing.JFrame {
                 }
                 break;
         }
-        
+
+    }
+
+
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+        // TODO add your handling code here:
+
+        mover(evt.getKeyCode());
+        pickupObject();
+        goBattle();
     }//GEN-LAST:event_formKeyPressed
 
     private void startMap() {
@@ -271,7 +294,7 @@ public class GUI extends javax.swing.JFrame {
         map[6][0].setIcon(pop[2]);
         map[6][1].setIcon(pop[2]);
         map[6][2].setIcon(pop[2]);
-      
+
         map[0][3].setIcon(pop[2]);
         map[1][3].setIcon(pop[2]);
         map[2][3].setIcon(pop[2]);
@@ -289,7 +312,6 @@ public class GUI extends javax.swing.JFrame {
         map[7][5].setIcon(pop[2]);
         map[7][6].setIcon(pop[2]);
         map[7][7].setIcon(pop[2]);
-        
 
     }
 

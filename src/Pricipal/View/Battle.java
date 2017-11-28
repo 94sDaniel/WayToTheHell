@@ -17,6 +17,11 @@ public class Battle extends javax.swing.JFrame {
     public Battle() {
         initComponents();
     }
+    
+    
+     public Battle(int types) {
+        initComponents();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,7 +46,7 @@ public class Battle extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(700, 400));
         setMinimumSize(new java.awt.Dimension(700, 400));
         getContentPane().setLayout(null);
@@ -84,12 +89,12 @@ public class Battle extends javax.swing.JFrame {
         getContentPane().add(jPanel1);
         jPanel1.setBounds(-20, 330, 800, 110);
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Means/leonidasgrande.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Means/leonidasgrande (2).png"))); // NOI18N
         jLabel4.setMaximumSize(new java.awt.Dimension(200, 200));
         jLabel4.setMinimumSize(new java.awt.Dimension(200, 200));
         jLabel4.setPreferredSize(new java.awt.Dimension(200, 200));
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(200, 170, 100, 120);
+        jLabel4.setBounds(60, 130, 290, 250);
 
         jPanel2.setOpaque(false);
 

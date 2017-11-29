@@ -4,6 +4,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -197,18 +198,28 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void pickupObject() {
-        if (posY == 0 && posX == 2 || posY == 0 && posX == 7 || posY == 7 && posX == 3) {
+        
+        if (posY == 0 && posX == 2) {
             JOptionPane.showMessageDialog(null, "Recogio un fracmento de la espada");
+            
+            
         }
     }
 
     private void goBattle() {
-        double option = Math.random();
-        if (option >= 0.8) {
-            Battle btl = new Battle(0);
-            btl.setVisible(true);
-        }
+       if (Math.random() >= 0.9) {
+                Battle btl = new Battle(0);
+                btl.setVisible(true);
+            }
+    }
+    
+    private void goFinalBattle() {
+            
+            FinalBattle fbtl = new FinalBattle(1);
+            fbtl.setVisible(true);
+            
     }
 
     private void mover(int tecla) {
@@ -261,6 +272,12 @@ public class GUI extends javax.swing.JFrame {
         mover(evt.getKeyCode());
         pickupObject();
         goBattle();
+        if(posX==1&&posY==6){
+            
+            showMessageDialog(null, "Batalla final");
+            goFinalBattle();
+        }
+        
     }//GEN-LAST:event_formKeyPressed
 
     private void startMap() {

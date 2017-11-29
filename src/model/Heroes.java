@@ -16,18 +16,4 @@ public class Heroes extends Personajes{
     }
     
     private int specialAbility;
-
-    /**
-     * @return the specialAbility
-     */
-    public int getSpecialAbility() {
-        return specialAbility;
-    }
-
-    /**
-     * @param specialAbility the specialAbility to set
-     */
-    public void setSpecialAbility(int specialAbility) {
-        this.specialAbility = specialAbility;
-    }
 }

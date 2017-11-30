@@ -1,10 +1,11 @@
-package Pricipal.View;
+package View;
 
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.showMessageDialog;
+import View.Battle;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -13,7 +14,9 @@ import static javax.swing.JOptionPane.showMessageDialog;
  */
 /**
  *
- * @author JCALLE
+ * @author Daniel Sierra Calle - David Parra - Gerson Herrera
+ * @since 30/11/2017
+ * @version 1.0
  */
 public class GUI extends javax.swing.JFrame {
 
@@ -156,21 +159,20 @@ public class GUI extends javax.swing.JFrame {
         jLabel1.setBounds(0, 0, 776, 439);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(550, 360));
         setMinimumSize(new java.awt.Dimension(550, 360));
-        setPreferredSize(new java.awt.Dimension(550, 360));
         addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
             }
         });
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         Mapa.setMaximumSize(new java.awt.Dimension(700, 700));
         Mapa.setMinimumSize(new java.awt.Dimension(700, 700));
         Mapa.setOpaque(false);
         Mapa.setLayout(new java.awt.GridLayout(8, 8));
-        getContentPane().add(Mapa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -7, 550, 330));
+        getContentPane().add(Mapa);
+        Mapa.setBounds(0, -7, 550, 330);
 
         Fondo.setMaximumSize(new java.awt.Dimension(1680, 1500));
         Fondo.setMinimumSize(new java.awt.Dimension(1680, 1500));
@@ -193,33 +195,45 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(0, 1050, Short.MAX_VALUE))
         );
 
-        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -2, -1, 530));
+        getContentPane().add(Fondo);
+        Fondo.setBounds(0, -2, 1680, 530);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     
     private void pickupObject() {
-        
-        if (posY == 0 && posX == 2) {
+
+        if (posY == 0 && posX == 2 && espada == 0) {
+            espada++;
             JOptionPane.showMessageDialog(null, "Recogio un fracmento de la espada");
-            
-            
+        } else if (posY == 0 && posX == 7 && espada == 1) {
+            espada++;
+            JOptionPane.showMessageDialog(null, "Recogio un fracmento de la espada");
+        } else if (posY == 7 && posX == 3 && espada == 2) {
+            espada++;
+            JOptionPane.showMessageDialog(null, "Has recogido los 3 fracmentos de la espada");
         }
     }
 
     private void goBattle() {
-       if (Math.random() >= 0.9) {
-                Battle btl = new Battle(0);
-                btl.setVisible(true);
-            }
+        if (posY == 0 && posX == 3) {
+            Battle btl = new Battle(0);
+            btl.setVisible(true);
+        } else if (posY == 1 && posX == 7) {
+            Battle btl = new Battle(0);
+            btl.setVisible(true);
+        } else if (posY == 7 && posX == 4) {
+            Battle btl = new Battle(0);
+            btl.setVisible(true);
+        }
     }
-    
+
     private void goFinalBattle() {
-            
-            FinalBattle fbtl = new FinalBattle(1);
-            fbtl.setVisible(true);
-            
+
+        FinalBattle fbtl = new FinalBattle(1);
+        fbtl.setVisible(true);
+
     }
 
     private void mover(int tecla) {
@@ -272,12 +286,15 @@ public class GUI extends javax.swing.JFrame {
         mover(evt.getKeyCode());
         pickupObject();
         goBattle();
-        if(posX==1&&posY==6){
-            
-            showMessageDialog(null, "Batalla final");
-            goFinalBattle();
+        if (posX == 1 && posY == 6) {
+            if (espada == 3) {
+                showMessageDialog(null, "Batalla final");
+                goFinalBattle();
+            } else {
+                showMessageDialog(null, "Aun no tiene los fracmentos de la espada");
+            }
         }
-        
+
     }//GEN-LAST:event_formKeyPressed
 
     private void startMap() {
@@ -367,8 +384,13 @@ public class GUI extends javax.swing.JFrame {
         });
     }
     int posX = 0, posY = 0;
+    //matriz donde se genera el mapa, se guardan y se asignan diferentes funciones en diferentes posiciones de este
     private final JLabel[][] map = new JLabel[8][8];
+    //arreglo donde se asignan la imagenes que se utilizan dentro de la matriz de map
     private ImageIcon pop[] = new ImageIcon[8];
+    //variable para guardar el numero de fracmentos de la espada
+    private int espada = 0;
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Fondo;

@@ -7,22 +7,24 @@ package model;
 
 /**
  *
- * @author JCALLE
+ * @author Daniel Sierra Calle - David Parra - Gerson Herrera
+ * @since 30/11/2017
+ * @version 1.0
  */
 public class Personajes {
-    
+    //variable para nombre del personaje
     private String nombre;
-    
+    //variable para el valor de vida del personaje
     private int life;
-    
+    //variable para el valor de ataque del personaje
     private int atk;
-    
+    //variable para la velocidad del personaje
     private int speed;
-    
+    //variable para nombre del personaje
     private int colife;
-    
+    //variable para nombre del personaje
     private int coatk;
-    
+    //variable para nombre del personaje
     private int cospeed;
    
 

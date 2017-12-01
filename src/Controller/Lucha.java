@@ -5,6 +5,8 @@
  */
 package Controller;
 
+import View.Gameover;
+import View.Story;
 import model.Heroes;
 import model.Personajes;
 
@@ -17,47 +19,31 @@ import model.Personajes;
 public class Lucha {
      // personajes de usuario
     Heroes zeus;
-    Heroes poseidon;
-    Heroes perseo;
+//    Heroes poseidon;
+//    Heroes perseo;
     
     // persoanjes de computadora
     Personajes hades;
-    Personajes abigor;
-    Personajes can_cerbero;
-    Personajes grifo;
-    Personajes medusa;
-    Personajes centauro;
-    Personajes craken;
-    Personajes hidra;
-    Personajes leon_nemea;
-    Personajes minotauro;
-    Personajes quimera;
-    Personajes arpia;
-    Personajes esfinge;
-    Personajes ciclope;
-    Personajes Python;
-    Personajes scylla;
+//  Personajes abigor;
+//    Personajes can_cerbero;
+//    Personajes grifo;
+//    Personajes medusa;
+//    Personajes centauro;
+//    Personajes craken;
+//    Personajes hidra;
+//    Personajes leon_nemea;
+//    Personajes minotauro;
+//    Personajes quimera;
+//    Personajes arpia;
+//    Personajes esfinge;
+//    Personajes ciclope;
+//    Personajes Python;
+//    Personajes scylla;
 
-    public Lucha (Heroes zeus, Heroes poseidon, Heroes perseo, Personajes hades, Personajes abigor, Personajes can_cerbero, Personajes grifo, Personajes medusa, Personajes centauro, Personajes craken, Personajes hidra, Personajes leon_nemea, Personajes minotauro, Personajes quimera, Personajes arpia, Personajes esfinge, Personajes ciclope, Personajes Python, Personajes scylla) {
+    public Lucha (Heroes zeus, Personajes hades) {
         this.zeus =  zeus;
-        this.poseidon =  poseidon;
-        this.perseo = perseo;
         this.hades = hades;
-        this.abigor = abigor;
-        this.can_cerbero = can_cerbero;
-        this.grifo = grifo;
-        this.medusa = medusa;
-        this.centauro = centauro;
-        this.craken = craken;
-        this.hidra = hidra;
-        this.leon_nemea = leon_nemea;
-        this.minotauro = minotauro;
-        this.quimera = quimera;
-        this.arpia = arpia;
-        this.esfinge = esfinge;
-        this.ciclope = ciclope;
-        this.Python = Python;
-        this.scylla = scylla;
+        
     }
     
     /**
@@ -67,16 +53,19 @@ public class Lucha {
      */
     public String atacar (int seleccion){
         String mensaje = "";
-        if (zeus.getSpeed()> grifo.getSpeed()){
-            batalla(zeus,grifo,seleccion);
+        Personajes atacante, defensor;
+        if (zeus.getSpeed()> hades.getSpeed()){
+            batalla(zeus,hades,seleccion);
             if(zeus.getLife()> 0){
-                int seleccionCom = grifo.getAtk();
-                mensaje += "\n" + batalla(zeus, grifo,seleccionCom);
+                int seleccionCom = hades.getAtk();
+                mensaje += "\n" + batalla(zeus, hades,seleccionCom);
             }else{
                 mensaje += "\n El ganador es " +zeus.getNombre();
+               Gameover jFrame = new Gameover();
+            jFrame.setVisible(true);
             }
         }else{
-            int seleccionCom = grifo.getAtk();
+            int seleccionCom = hades.getAtk();
         }
         return mensaje;
     }

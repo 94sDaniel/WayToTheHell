@@ -300,7 +300,7 @@ public class GUI extends javax.swing.JFrame {
     private void startMap() {
         pop[1] = new ImageIcon(getClass().getResource("/Means/soldier.png"));
         pop[2] = new ImageIcon(getClass().getResource("/Means/wall.png"));
-        pop[3] = new ImageIcon(getClass().getResource("/Means/Hades.png"));
+        pop[3] = new ImageIcon(getClass().getResource("/Means/Hades_1.png"));
         pop[4] = new ImageIcon(getClass().getResource("/Means/leonidas_frente.png"));
         pop[5] = new ImageIcon(getClass().getResource("/Means/leonidas_atras.png"));
         pop[6] = new ImageIcon(getClass().getResource("/Means/leonidas_lado.png"));

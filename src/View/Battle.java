@@ -8,6 +8,7 @@ package View;
 import Controller.Lucha;
 import model.Heroes;
 import model.Personajes;
+
 /**
  *
  * @author Daniel Sierra Calle - David Parra - Gerson Herrera
@@ -22,8 +23,6 @@ public class Battle extends javax.swing.JFrame {
     public Battle() {
         initComponents();
     }
-    
-    
             
             
      public Battle(int types) {
@@ -258,7 +257,7 @@ Personajes abigor = new Personajes("Abigor",100,43,66);
 Personajes cancerbero = new Personajes("Cancerbero",100,46,43);
 Personajes grifo = new Personajes("Grifo",100,48,47);
 
-
+Lucha campo = new Lucha(zeus,abigor);
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
